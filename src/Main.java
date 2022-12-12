@@ -79,6 +79,37 @@ public class Main {
         System.out.println(cars);
 
 
+        // ArrayList VS LinkedList
+
+        List<Integer> list = new LinkedList<>();
+
+        for (int i = 0; i < 5000000; i++){
+            list.add(i);
+        }
+
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < 100; i++){
+            list.add(2000000, Integer.MAX_VALUE);
+        }
+
+        System.out.println("Время работы для LinkedList в (миллисикундах)" + (System.currentTimeMillis() - start));
+
+
+        list = new ArrayList<>();
+
+        for (int i = 0; i < 5000000; i++){
+            list.add(i);
+        }
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 100; i++){
+            list.add(2000000, Integer.MAX_VALUE);
+        }
+
+        System.out.println("Время работы для ArrayList в (миллисикундах)" + (System.currentTimeMillis() - start));
+
 
     }
 
