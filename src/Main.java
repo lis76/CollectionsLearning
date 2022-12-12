@@ -58,6 +58,27 @@ public class Main {
 
         System.out.println(romanBio);
 
+        // Linked list on practice
+
+        LinkedList<Car> cars = new LinkedList<>();
+        Car ferrari = new Car("Ferrari Spider");
+        Car lada = new Car("Lada Samara");
+        Car kia = new Car("Kia Rio");
+
+        cars.addAll( Arrays.asList(ferrari, lada, kia));
+
+        System.out.println(cars);
+
+        cars.addFirst(new Car("Ford GT300"));
+        cars.addLast(new Car("Fiat"));
+
+        System.out.println(cars);
+
+        System.out.println(cars.pollFirst());
+
+        System.out.println(cars);
+
+
 
     }
 
