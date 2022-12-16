@@ -24,9 +24,9 @@ public class Main {
             catsList.add(cat);
         }
 
-        catsList.add(new Cat( "Мурка"));
+        catsList.add(new Cat( "Том"));
 
-        catsList.remove(1);
+        //catsList.remove(1);
 
         Cat cat = catsList.get(0);
         System.out.println(cat);
@@ -36,7 +36,7 @@ public class Main {
         catsList.add(2, cat);
         catsList.set(2,new Cat("Меня сюда вставили"));
 
-        catsList.removeAll(Arrays.asList(cat, catsList.get(3)));
+        //catsList.removeAll(Arrays.asList(cat, catsList.get(3)));
 
         System.out.println(catsList.toString());
 
@@ -81,6 +81,7 @@ public class Main {
 
         // ArrayList VS LinkedList
 
+/*
         List<Integer> list = new LinkedList<>();
 
         for (int i = 0; i < 5000000; i++){
@@ -109,6 +110,42 @@ public class Main {
         }
 
         System.out.println("Время работы для ArrayList в (миллисикундах)" + (System.currentTimeMillis() - start));
+*/
+
+
+
+        // Set
+
+        Set<String> states =new HashSet<>();
+
+        states.add("Germany");
+        states.add("France");
+        states.add("Italy");
+
+
+        boolean isAdded = states.add("Italy");
+
+        System.out.println("Italy is added: " + isAdded);
+        System.out.println("Set contains: " + states.size());
+
+        System.out.println(states);
+
+        states.remove("Germany");
+
+        System.out.println(states);
+
+        HashSet<Cat> catHashSet = new HashSet<>(catsList);
+
+        System.out.println(catHashSet);
+
+
+        TreeSet<Cat> catTreeSet = new TreeSet<>(catsList);
+
+        System.out.println(catTreeSet);
+
+
+        // Map
+
 
 
     }
